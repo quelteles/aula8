@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jogo Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo">Pergunta 1: Quando vai ser a primeira AV1?</p>
+
+<form>
+  <input type="radio" id="alternativa1" name="fav_language" value="HTML">
+  <label for="html">08/10</label><br>
+  <input type="radio" id="alternativa2" name="fav_language" value="CSS">
+  <label for="css">15/10</label><br>
+  <input type="radio" id="alternativa3" name="fav_language" value="JavaScript">
+  <label for="javascript">22/10</label>
+  <script>
+    function ChecarResposta(){
+        const OpcaoEscolhida = document.querySelector('input[name="pergunta1"]:checked');
+        const RespostaCerta = "data2"
+        alert(OpcaoEscolhida);
+
+        document.getElementById("demo").innerHTML = "Hello JavaScript";
+        if (OpcaoEscolhida.value == RespostaCerta){
+            window.location.href = 'questao.html';
+            alert('Opção Certa, continue na proxima pagina')
+        }else{
+            alert('Opção Errada =(')
+        }
+    }
+</script>
+
+<br><button type="button" onclick="ChecarResposta()">Try it</button>
+
+</form>
+</body>
+</html>
